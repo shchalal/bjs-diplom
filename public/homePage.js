@@ -90,11 +90,13 @@ function initFavorites() {
       favoritesWidget.clearTable();
       favoritesWidget.fillTable(response.data);
       favoritesWidget.updateUsersList(response.data);
+      moneyManager.updateUsersList(response.data);
     } else {
       console.error('Ошибка при получении списка избранного:', response.error);
     }
   });
 }
+
 
 initFavorites();
 
